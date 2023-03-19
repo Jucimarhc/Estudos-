@@ -9,9 +9,9 @@ arquivo = f.read()
 print(arquivo) """
 
 
-nome = input("Digite seu Login:")
+"""nome = input("Digite seu Login:")
 senha = input("Digite sua senha :")
 f = open("Login é senha.txt,","a") 
 f.write ("Login :{}\n".format(nome) + "Senha:{}\n".format(senha))
 f.close()
-print("Nome e senha do usuário foram salvos no arquivo.")
+print("Nome e senha do usuário foram salvos no arquivo.")"""
