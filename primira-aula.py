@@ -19,18 +19,29 @@ print("Nome e senha do usuário foram salvos no arquivo.")"""
 import os
 
 try :
-    f = open("Login_senha.txt","a").close()
-
+    f = open("Login_senha.txt","a")
+    nome = input ("Digite seu nome:")
+    senha = input("Digite sua senha:")
 except OSError as erro:
     print("erro ao criar o arquivo ")
     print("Descrição", erro)
 else:
-    print("arquivo Criado")    
+    print("arquivo Criado") 
+
+Novasenha = []
+
+for linha in f.readlines():
+    nome = linha.strip ("\n").split(":")[0]
+    senha = linha.strip("\n").split(":")[1]      
+    if userName == nome:
+      print(nome)  
+    if userPass == senha:
+        print("Senha correta", senha)  
 
 try:
     os.mkdir('Login')
 except FileExistsError as erro:
-    print("Diretoria ja existe \n", erro)
+    print("Diretorio ja existe \n", erro)
 except PermissionError as erro: 
     print("Vocé não possue privilegios")
     print("Descrição",erro)    
